@@ -7,52 +7,46 @@ namespace E13.Sample.Data
     public class DevSeed : IDataSeed<SampleContext>
     {
         public const string Owner1 = "Owner 1";
-        public const string Owner2 = "Owner 1";
+        public const string Owner2 = "Owner 2";
 
         public void Seed(SampleContext context)
         {
             context.Database.EnsureCreated();
 
-            var categoryA = new Category
+            var categoryA = new Category("Category A")
             {
-                Id = Guid.NewGuid(),
-                Name = "Category A"
+                Id = Guid.NewGuid()
             };
-            var categoryB = new Category
+            var categoryB = new Category("Category B")
             {
-                Id = Guid.NewGuid(),
-                Name = "Category B"
+                Id = Guid.NewGuid()
             };
             context.Categories.Add(categoryA);
             context.Categories.Add(categoryB);
             
-            var taskA1 = new Task
+            var taskA1 = new Task("Task A1")
             {
                 Id = Guid.NewGuid(),
                 Category = categoryA,
-                Name = "Task A1",
                 OwnedBy = Owner1
             };
-            var taskA2 = new Task
+            var taskA2 = new Task("Task A2")
             {
                 Id = Guid.NewGuid(),
                 Category = categoryA,
-                Name = "Task A2",
                 OwnedBy = Owner2
             };
 
-            var taskB1 = new Task
+            var taskB1 = new Task("Task B1")
             {
                 Id = Guid.NewGuid(),
                 Category = categoryB,
-                Name = "Task B1",
                 OwnedBy = Owner1
             };
-            var taskB2 = new Task
+            var taskB2 = new Task("Task B2")
             {
                 Id = Guid.NewGuid(),
                 Category = categoryB,
-                Name = "Task B2",
                 OwnedBy = Owner2
             };
             context.Tasks.Add(taskA1);

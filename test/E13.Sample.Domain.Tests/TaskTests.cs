@@ -13,7 +13,7 @@ namespace E13.Sample.Domain.Tests
             var arranged = "Lorem ipsum dolor si";
             var expected = arranged;
 
-            var t = new Task
+            var t = new Task(nameof(TaskTests))
             {
                 Description = arranged
             };
@@ -27,7 +27,7 @@ namespace E13.Sample.Domain.Tests
             var arranged = "Lorem ipsum dolor sit amet, consectetur adipiscing elit";
             var expected = "Lorem ipsum dolor si...";
 
-            var t = new Task
+            var t = new Task(nameof(TaskTests))
             {
                 Description = arranged
             };

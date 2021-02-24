@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="E13.Common.Data.Db" Version="2021.48.1" />
+    <PackageReference Include="E13.Common.Data.Db" Version="2021.55.1" />
   </ItemGroup>
 
   <ItemGroup>

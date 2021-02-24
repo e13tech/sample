@@ -13,7 +13,7 @@ namespace E13.Sample.Data
 
         public IEnumerable<IGrouping<Category?, Task>> ForOwnerByCatgory(string ownedBy)
         {
-            return (Context as SampleContext).Tasks
+            return DbSet
                 .Where(t => t.OwnedBy == ownedBy)
                 .Include(t => t.Category)
                 .AsNoTracking()

@@ -11,13 +11,14 @@ namespace E13.Sample.Data
     {
         public TaskRepository(SampleContext ctx) : base(ctx) { }
 
-        public IEnumerable<IGrouping<Category, Task>> ForOwnerByCatgory(string ownedBy)
+        public IEnumerable<IGrouping<Category?, Task>> ForOwnerByCatgory(string ownedBy)
         {
             return (Context as SampleContext).Tasks
-                .Include(t => t.Category)
                 .Where(t => t.OwnedBy == ownedBy)
-                .GroupBy(t => t.Category)
-                .ToList();
+                .Include(t => t.Category)
+                .AsNoTracking()
+                .ToList()
+                .GroupBy(t => t.Category);
         }
     }
 }

@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>aspnet-E13.Sample.Api-FC01A3A0-91BA-4670-84A1-D5CBF95C1FAF</UserSecretsId>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="E13.Common.Api" Version="2021.42.18" />
+  </ItemGroup>
+
+</Project>

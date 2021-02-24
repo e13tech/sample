@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="E13.Common.Logic" Version="2021.42.17" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\E13.Sample.Data\E13.Sample.Data.csproj" />
+  </ItemGroup>
+
+</Project>
